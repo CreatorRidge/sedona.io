@@ -1,4 +1,4 @@
-# Личный проект «{{projectTitle}}»
+# Личный проект «{{Sedona}}»
 
 * Студент: [{{Романова Риджина}}]({{https://htmlacademy.ru/profile/creatorridgeuserProfile}}).
 * Наставник: `Неизвестно`.
