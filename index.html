@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/styles.css">
   <title>Седона. Городок в Аризоне</title>
 </head>
 
@@ -39,7 +40,9 @@
     <h1 class="visually-hidden">Седона</h1>
     <section class="welcome-sedona">
       <h2 class="visually-hidden">Добро пожаловать в Седону</h2>
-      <img class="welcome-sedona-image" width="1200" height="485" src="images/background/background-index.jpg" alt="Природная достопримечательность Седоны с приветственной надписью">
+      <div class="welcome-sedona-container">
+        <span class="visually-hidden">Welcome to the gorgeous Sedona “Because the Grand Canyon sucks!”</span>
+      </div>
     </section>
     <section class="section-about">
       <h2  class="visually-hidden">О Седоне</h2>
@@ -47,7 +50,7 @@
       <p class="section-about-details">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
     </section>
     <section class="advantages">
-      <h2  class="advantages-title">Преимущества</h2>
+      <h2  class="visually-hidden">Преимущества</h2>
       <ul class="advantages-list">
         <li class="advantages-list-card">
           <h3 class="advantages-card-title">Настоящий городок</h3>
@@ -74,9 +77,8 @@
       </ul>
     </section>
     <section class="services">
-      <h2 class="services-title">Услуги и сервисы</h2>
-      <b class="services-invite">Приезжайте в Седону отдохнуть в комфорте и уюте!</b>
-      <p class="rest-message">Опытный персонал и качественное обслуживание!</p>
+      <h2 class="services-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
+      <p class="services-description">Опытный персонал и качественное обслуживание!</p>
       <ul class="services-list">
         <li class="services-list-card">
           <h3 class="services-card-title">Жильё</h3>
@@ -106,7 +108,7 @@
       <form class="footer-subscription-form" action="https://echo.htmlacademy.ru" method="post">
         <label class="visually-hidden" for="subscription-email">Email</label>
         <input class="field" type="email" id="subscription-email" name="subscription-email" placeholder="Ваш e-mail" required>
-        <button class="button subscription-button" type="submit">Подписаться</button>
+        <button class="subscription-button button-light button" type="submit">Подписаться</button>
       </form>
     </section>
     <section class="footer-contacts">
