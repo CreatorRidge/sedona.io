@@ -11,7 +11,9 @@
   <div class="page-container">
     <header class="page-header">
       <nav class="navigation">
-        <img class="logo" src="images/svg/logo.svg" width="140" height="70" alt="Логотип Седоны">
+        <a class="navigation-logo-link" href="index.html">
+          <img class="logo" src="images/svg/logo.svg" width="140" height="70" alt="Логотип Седоны">
+        </a>
         <ul class="navigation-list">
           <li class="navigation-list-item">
             <a class="navigation-link" href="index.html">Главная</a>
@@ -24,14 +26,14 @@
           </li>
         </ul>
         <ul class="navigation-list navigation-user">
-          <li class="navigation-item">
-            <a class="navigation-link" href="#"><span class="visually-hidden" hidden>Поиск</span></a>
+          <li class="navigation-list-item button-item">
+            <a class="navigation-link button" href="#">Хочу сюда!</a>
           </li>
           <li class="navigation-list-item">
             <a class="navigation-link" href="#"><span class="visually-hidden" hidden>Отелей в избранном: </span><span class="count">12</span></a>
           </li>
           <li class="navigation-list-item">
-            <a class="navigation-link button" href="#">Хочу сюда!</a>
+            <a class="navigation-link" href="#"><span class="visually-hidden" hidden>Поиск</span></a>
           </li>
         </ul>
       </nav>
@@ -107,141 +109,155 @@
         </form>
       </section>
       <section class="catalog-hotels">
-        <div class="catalog-container">
-          <div class="catalog-search-container">
-            <p class="search-result">Найдено гостиниц: <span class="search-result-span">38</span></p>
-            <form class="sorting-type">
-              <label-- class="visually-hidden" for="sorting" hidden>Сортировка</label-->
-              <select class="select-control" aria-label="Сортировка" id="sorting" name="sorting">
-                <option value="popular">Сначала популярные</option>
-                <option value="cheap" selected>Сначала дешевые</option>
-                <option value="expensive">Сначала дорогие</option>
-              </select>
-              <button class="visually-hidden" type="submit" hidden>Отсортировать продукты</button>
-            </form>
-            <div class="button-search-container">
-              <a class="button-search button-search-current" href="catalog.html?view=tile">
-                <span class="visually-hidden" hidden>Показать плитку</span>
-              </a>
-              <a class="button-search" href="catalog.html?view=card">
-                <span class="visually-hidden" hidden>Показать карточки</span>
-              </a>
-              <a class="button-search" href="catalog.html?view=list">
-                <span class="visually-hidden" hidden>Показать список</span>
-              </a>
-            </div>
+        <div class="catalog-search-container">
+          <p class="search-result">Найдено гостиниц: <span class="search-result-span">38</span></p>
+          <form class="sorting-type">
+            <label-- class="visually-hidden" for="sorting" hidden>Сортировка</label-->
+            <select class="select-control" aria-label="Сортировка" id="sorting" name="sorting">
+              <option value="popular">Сначала популярные</option>
+              <option value="cheap" selected>Сначала дешевые</option>
+              <option value="expensive">Сначала дорогие</option>
+            </select>
+            <button class="visually-hidden" type="submit" hidden>Отсортировать продукты</button>
+          </form>
+          <div class="button-search-container">
+            <a class="button-search button-search-current" href="catalog.html?view=tile">
+              <span class="visually-hidden" hidden>Показать плитку</span>
+            </a>
+            <a class="button-search" href="catalog.html?view=card">
+              <span class="visually-hidden" hidden>Показать карточки</span>
+            </a>
+            <a class="button-search" href="catalog.html?view=list">
+              <span class="visually-hidden" hidden>Показать список</span>
+            </a>
           </div>
-          <ul class="hotels-list">
-            <li class="hotels-card">
-              <a class="hotels-card-link" href="hotel.html">
-                <img class="hotels-card-image" src="images/hotels/hotel-1.jpg" width="300" height="212" alt="">
-                <h3 class="hotels-card-title">Amara Resort & Spa</h3>
-              </a>
-              <p class="hotels-card-type">Гостиница<span class="hotels-card-price">От 4000 ₽</span></p>
-              <a class="card-button-more button" href="#">подробнее</a>
-              <button class="card-button-favorites button-light button" href="#">в избранное</button>
-              <div class="rating-area" aria-label="Рейтинг">
-                <input class="rating-input" type="radio" id="star-5" name="rating" value="5">
-                <label class="rating-label visually-hidden" for="star-5" title="Оценка «5»" hidden>Оценка «5»</label>
-                <input class="rating-input" type="radio" id="star-4" name="rating" value="4">
-                <label class="rating-label visually-hidden" for="star-4" title="Оценка «4»" hidden>Оценка «4»</label>
-                <input class="rating-input" type="radio" id="star-3" name="rating" value="3">
-                <label class="rating-label visually-hidden" for="star-3" title="Оценка «3»" hidden>Оценка «3»</label>
-                <input class="rating-input" type="radio" id="star-2" name="rating" value="2">
-                <label class="rating-label visually-hidden" for="star-2" title="Оценка «2»" hidden>Оценка «2»</label>
-                <input class="rating-input" type="radio" id="star-1" name="rating" value="1">
-                <label class="rating-label visually-hidden" for="star-1" title="Оценка «1»" hidden>Оценка «1»</label>
-              </div>
-              <span class="hotels-card-rating button-gray button">Рейтинг: 8,5</span>
-            </li>
-            <li class="hotels-card">
-              <a class="hotels-card-link" href="hotel.html">
-                <img class="hotels-card-image" src="images/hotels/hotel-2.jpg" width="300" height="212" alt="">
-                <h3 class="hotels-card-title">Villas at Poco Diablo</h3>
-              </a>
-              <p class="hotels-card-type">Гостиница<span class="hotels-card-price">От 5000 ₽</span></p>
-              <a class="card-button-more button" href="#">подробнее</a>
-              <button class="card-button-favorites button-favorites-active button" href="#">в избранном</button>
-              <div class="rating-area" aria-label="Рейтинг">
-                <input class="rating-input" type="radio" id="star-5" name="rating" value="5">
-                <label class="rating-label visually-hidden" for="star-5" title="Оценка «5»" hidden>Оценка «5»</label>
-                <input class="rating-input" type="radio" id="star-4" name="rating" value="4">
-                <label class="rating-label visually-hidden" for="star-4" title="Оценка «4»" hidden>Оценка «4»</label>
-                <input class="rating-input" type="radio" id="star-3" name="rating" value="3">
-                <label class="rating-label visually-hidden" for="star-3" title="Оценка «3»" hidden>Оценка «3»</label>
-                <input class="rating-input" type="radio" id="star-2" name="rating" value="2">
-                <label class="rating-label visually-hidden" for="star-2" title="Оценка «2»" hidden>Оценка «2»</label>
-                <input class="rating-input" type="radio" id="star-1" name="rating" value="1">
-                <label class="rating-label visually-hidden" for="star-1" title="Оценка «1»" hidden>Оценка «1»</label>
-              </div>
-              <span class="hotels-card-rating button-gray button">Рейтинг: 9,2</span>
-            </li>
-            <li class="hotels-card">
-              <a class="hotels-card-link" href="hotel.html">
-                <img class="hotels-card-image" src="images/hotels/hotel-3.jpg" width="300" height="212" alt="">
-                <h3 class="hotels-card-title">Desert Quail Inn</h3>
-              </a>
-              <p class="hotels-card-type">Гостиница<span class="hotels-card-price">От 2500 ₽</span></p>
-              <a class="card-button-more button" href="#">подробнее</a>
-              <button class="card-button-favorites button-light button" href="#">в избранное</button>
-              <div class="rating-area" aria-label="Рейтинг">
-                <input class="rating-input" type="radio" id="star-5" name="rating" value="5">
-                <label class="rating-label visually-hidden" for="star-5" title="Оценка «5»" hidden>Оценка «5»</label>
-                <input class="rating-input" type="radio" id="star-4" name="rating" value="4">
-                <label class="rating-label visually-hidden" for="star-4" title="Оценка «4»" hidden>Оценка «4»</label>
-                <input class="rating-input" type="radio" id="star-3" name="rating" value="3">
-                <label class="rating-label visually-hidden" for="star-3" title="Оценка «3»" hidden>Оценка «3»</label>
-                <input class="rating-input" type="radio" id="star-2" name="rating" value="2">
-                <label class="rating-label visually-hidden" for="star-2" title="Оценка «2»" hidden>Оценка «2»</label>
-                <input class="rating-input" type="radio" id="star-1" name="rating" value="1">
-                <label class="rating-label visually-hidden" for="star-1" title="Оценка «1»" hidden>Оценка «1»</label>
-              </div>
-              <span class="hotels-card-rating button-gray button">Рейтинг: 6,9</span>
-            </li>
-            <li class="hotels-card">
-              <a class="hotels-card-link" href="hotel.html">
-                <img class="hotels-card-image" src="images/hotels/hotel-4.jpg" width="300" height="212" alt="">
-                <h3 class="hotels-card-title">GreenTree Inn</h3>
-              </a>
-              <p class="hotels-card-type">Гостиница<span class="hotels-card-price">От 1500 ₽</span></p>
-              <a class="card-button-more button" href="#">подробнее</a>
-              <button class="card-button-favorites button-light button" href="#">в избранное</button>
-              <div class="rating-area" aria-label="Рейтинг">
-                <input class="rating-input" type="radio" id="star-5" name="rating" value="5">
-                <label class="rating-label visually-hidden" for="star-5" title="Оценка «5»" hidden>Оценка «5»</label>
-                <input class="rating-input" type="radio" id="star-4" name="rating" value="4">
-                <label class="rating-label visually-hidden" for="star-4" title="Оценка «4»" hidden>Оценка «4»</label>
-                <input class="rating-input" type="radio" id="star-3" name="rating" value="3">
-                <label class="rating-label visually-hidden" for="star-3" title="Оценка «3»" hidden>Оценка «3»</label>
-                <input class="rating-input" type="radio" id="star-2" name="rating" value="2">
-                <label class="rating-label visually-hidden" for="star-2" title="Оценка «2»" hidden>Оценка «2»</label>
-                <input class="rating-input" type="radio" id="star-1" name="rating" value="1">
-                <label class="rating-label visually-hidden" for="star-1" title="Оценка «1»" hidden>Оценка «1»</label>
-              </div>
-              <span class="hotels-card-rating button-gray button">Рейтинг: 5,0</span>
-            </li>
-          </ul>
-          <ul class="pagination">
-            <li class="pagination-item item-current">
-              <a class="pagination-link pagination-current" aria-current="page">1</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">2</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">3</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">4</a>
-            </li>
-            <li class="pagination-item">
-              <span class="pagination-link show-more">...</span>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">10</a>
-            </li>
-          </ul>
         </div>
+        <ul class="hotels-list">
+          <li class="hotels-card">
+            <a class="hotels-card-link" href="hotel.html">
+              <img class="hotels-card-image" src="images/hotels/hotel-1.jpg" width="300" height="212" alt="">
+              <h3 class="hotels-card-title">Amara Resort & Spa</h3>
+            </a>
+            <p class="hotels-card-type">Гостиница<span class="hotels-card-price">От 4000 ₽</span></p>
+            <div class="hotels-card-buttons">
+              <a class="hotels-card-button card-button-more button" href="#">подробнее</a>
+              <button class="hotels-card-button card-button-favorites button-light button" href="#">в избранное</button>
+            </div>
+            <div class="hotels-card-buttons">
+              <div class="rating-area" aria-label="Рейтинг">
+                <input class="rating-input" type="radio" id="star-5" name="rating" value="5">
+                <label class="rating-label visually-hidden" for="star-5" title="Оценка «5»" hidden>Оценка «5»</label>
+                <input class="rating-input" type="radio" id="star-4" name="rating" value="4">
+                <label class="rating-label visually-hidden" for="star-4" title="Оценка «4»" hidden>Оценка «4»</label>
+                <input class="rating-input" type="radio" id="star-3" name="rating" value="3">
+                <label class="rating-label visually-hidden" for="star-3" title="Оценка «3»" hidden>Оценка «3»</label>
+                <input class="rating-input" type="radio" id="star-2" name="rating" value="2">
+                <label class="rating-label visually-hidden" for="star-2" title="Оценка «2»" hidden>Оценка «2»</label>
+                <input class="rating-input" type="radio" id="star-1" name="rating" value="1">
+                <label class="rating-label visually-hidden" for="star-1" title="Оценка «1»" hidden>Оценка «1»</label>
+              </div>
+              <span class="hotels-card-button hotels-card-rating button-gray button">Рейтинг: 8,5</span>
+            </div>
+          </li>
+          <li class="hotels-card">
+            <a class="hotels-card-link" href="hotel.html">
+              <img class="hotels-card-image" src="images/hotels/hotel-2.jpg" width="300" height="212" alt="">
+              <h3 class="hotels-card-title">Villas at Poco Diablo</h3>
+            </a>
+            <p class="hotels-card-type">Гостиница<span class="hotels-card-price">От 5000 ₽</span></p>
+            <div class="hotels-card-buttons">
+              <a class="hotels-card-button card-button-more button" href="#">подробнее</a>
+              <button class="hotels-card-button card-button-favorites button-favorites-active button" href="#">в избранном</button>
+            </div>
+            <div class="hotels-card-buttons">
+              <div class="rating-area" aria-label="Рейтинг">
+                <input class="rating-input" type="radio" id="star-5" name="rating" value="5">
+                <label class="rating-label visually-hidden" for="star-5" title="Оценка «5»" hidden>Оценка «5»</label>
+                <input class="rating-input" type="radio" id="star-4" name="rating" value="4">
+                <label class="rating-label visually-hidden" for="star-4" title="Оценка «4»" hidden>Оценка «4»</label>
+                <input class="rating-input" type="radio" id="star-3" name="rating" value="3">
+                <label class="rating-label visually-hidden" for="star-3" title="Оценка «3»" hidden>Оценка «3»</label>
+                <input class="rating-input" type="radio" id="star-2" name="rating" value="2">
+                <label class="rating-label visually-hidden" for="star-2" title="Оценка «2»" hidden>Оценка «2»</label>
+                <input class="rating-input" type="radio" id="star-1" name="rating" value="1">
+                <label class="rating-label visually-hidden" for="star-1" title="Оценка «1»" hidden>Оценка «1»</label>
+              </div>
+              <span class="hotels-card-button hotels-card-rating button-gray button">Рейтинг: 9,2</span>
+            </div>
+          </li>
+          <li class="hotels-card">
+            <a class="hotels-card-link" href="hotel.html">
+              <img class="hotels-card-image" src="images/hotels/hotel-3.jpg" width="300" height="212" alt="">
+              <h3 class="hotels-card-title">Desert Quail Inn</h3>
+            </a>
+            <p class="hotels-card-type">Гостиница<span class="hotels-card-price">От 2500 ₽</span></p>
+            <div class="hotels-card-buttons">
+              <a class="hotels-card-button card-button-more button" href="#">подробнее</a>
+              <button class="hotels-card-button card-button-favorites button-light button" href="#">в избранное</button>
+            </div>
+            <div class="hotels-card-buttons">
+              <div class="rating-area" aria-label="Рейтинг">
+                <input class="rating-input" type="radio" id="star-5" name="rating" value="5">
+                <label class="rating-label visually-hidden" for="star-5" title="Оценка «5»" hidden>Оценка «5»</label>
+                <input class="rating-input" type="radio" id="star-4" name="rating" value="4">
+                <label class="rating-label visually-hidden" for="star-4" title="Оценка «4»" hidden>Оценка «4»</label>
+                <input class="rating-input" type="radio" id="star-3" name="rating" value="3">
+                <label class="rating-label visually-hidden" for="star-3" title="Оценка «3»" hidden>Оценка «3»</label>
+                <input class="rating-input" type="radio" id="star-2" name="rating" value="2">
+                <label class="rating-label visually-hidden" for="star-2" title="Оценка «2»" hidden>Оценка «2»</label>
+                <input class="rating-input" type="radio" id="star-1" name="rating" value="1">
+                <label class="rating-label visually-hidden" for="star-1" title="Оценка «1»" hidden>Оценка «1»</label>
+              </div>
+              <span class="hotels-card-button hotels-card-rating button-gray button">Рейтинг: 6,9</span>
+            </div>
+          </li>
+          <li class="hotels-card">
+            <a class="hotels-card-link" href="hotel.html">
+              <img class="hotels-card-image" src="images/hotels/hotel-4.jpg" width="300" height="212" alt="">
+              <h3 class="hotels-card-title">GreenTree Inn</h3>
+            </a>
+            <p class="hotels-card-type">Гостиница<span class="hotels-card-price">От 1500 ₽</span></p>
+            <div class="hotels-card-buttons">
+              <a class="hotels-card-button card-button-more button" href="#">подробнее</a>
+              <button class="hotels-card-button card-button-favorites button-light button" href="#">в избранное</button>
+            </div>
+            <div class="hotels-card-buttons">
+              <div class="rating-area" aria-label="Рейтинг">
+                <input class="rating-input" type="radio" id="star-5" name="rating" value="5">
+                <label class="rating-label visually-hidden" for="star-5" title="Оценка «5»" hidden>Оценка «5»</label>
+                <input class="rating-input" type="radio" id="star-4" name="rating" value="4">
+                <label class="rating-label visually-hidden" for="star-4" title="Оценка «4»" hidden>Оценка «4»</label>
+                <input class="rating-input" type="radio" id="star-3" name="rating" value="3">
+                <label class="rating-label visually-hidden" for="star-3" title="Оценка «3»" hidden>Оценка «3»</label>
+                <input class="rating-input" type="radio" id="star-2" name="rating" value="2">
+                <label class="rating-label visually-hidden" for="star-2" title="Оценка «2»" hidden>Оценка «2»</label>
+                <input class="rating-input" type="radio" id="star-1" name="rating" value="1">
+                <label class="rating-label visually-hidden" for="star-1" title="Оценка «1»" hidden>Оценка «1»</label>
+              </div>
+              <span class="hotels-card-button hotels-card-rating button-gray button">Рейтинг: 5,0</span>
+            </div>
+          </li>
+        </ul>
+        <ul class="pagination">
+          <li class="pagination-item item-current">
+            <a class="pagination-link pagination-current" aria-current="page">1</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">2</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">3</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">4</a>
+          </li>
+          <li class="pagination-item">
+            <span class="pagination-link show-more">...</span>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">10</a>
+          </li>
+        </ul>
       </section>
     </main>
 
