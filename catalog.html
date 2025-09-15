@@ -80,49 +80,77 @@
             <ul class="hotels-filter-list">
               <li class="hotels-filter-item">
                 <label class="control">
-                  <input class="control-input" type="checkbox" name="swimming-area" checked>
-                  Бассейн
+                  <input class="visually-hidden control-input" type="checkbox" name="swimming-area" checked>
+                  <span class="control-mark"></span>
+                  <span class="control-label">Бассейн</span>
                 </label>
               </li>
               <li class="hotels-filter-item">
                 <label class="control">
-                  <input class="control-input" type="checkbox" name="car-park" checked>
-                  Парковка
+                  <input class="visually-hidden control-input" type="checkbox" name="car-park" checked>
+                  <span class="control-mark"></span>
+                  <span class="control-label">Парковка</span>
                 </label>
               </li>
               <li class="hotels-filter-item">
                 <label class="control">
-                  <input class="control-input" type="checkbox" name="wi-fi">
-                  Wi-Fi
+                  <input class="visually-hidden control-input" type="checkbox" name="wi-fi">
+                  <span class="control-mark"></span>
+                  <span class="control-label">Wi-Fi</span>
                 </label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="hotels-filter-group">
-            <legend class="hotels-filter-title">Тип жилья:</legend>
+            <legend class="hotels-filter-title">Тип Жилья:</legend>
             <ul class="hotels-filter-list">
               <li class="hotels-filter-item">
                 <label class="control">
-                  <input class="control-input" type="radio" name="hotels-group" value="hotel" checked>
-                  Гостиница
+                  <input class="visually-hidden control-input" type="radio" name="hotels-group" value="hotel" checked>
+                  <span class="control-mark"></span>
+                  <span class="control-label">Гостиница</span>
                 </label>
               </li>
               <li class="hotels-filter-item">
                 <label class="control">
-                  <input class="control-input" type="radio" name="hotels-group" value="motel">
-                  Мотель
+                  <input class="visually-hidden control-input" type="radio" name="hotels-group" value="motel">
+                  <span class="control-mark"></span>
+                  <span class="control-label">Мотель</span>
                 </label>
               </li>
               <li class="hotels-filter-item">
                 <label class="control">
-                  <input class="control-input" type="radio" name="hotels-group" value="apartments">
-                  Апартаменты
+                  <input class="visually-hidden control-input" type="radio" name="hotels-group" value="apartments">
+                  <span class="control-mark"></span>
+                  <span class="control-label">Апартаменты</span>
                 </label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="hotels-filter-group">
             <legend class="hotels-filter-title">Стоимость, ₽:</legend>
+            <div class="range-wrapper-inputs">
+              <div class="range-inputs-field">
+                <input class="range-input" type="number" value="0" name="min-price">
+                <label class="hotels-filter-label">от</label>
+              </div>
+              <div class="range-inputs-field">
+                <input class="range-input" type="number" value="9000" name="max-price">
+                <label class="hotels-filter-label">до</label>
+              </div>
+            </div>
+            <div class="range">
+              <div class="range-scale">
+                <div class="range-bar" style="left: 0; width: 206px">
+                  <button class="range-toggle toggle-min" type="button">
+                    <span class="visually-hidden">Изменить минимальную цену.</span>
+                  </button>
+                  <button class="range-toggle toggle-max" type="button">
+                    <span class="visually-hidden">Изменить максимальную цену.</span>
+                  </button>
+                </div>
+              </div>
+            </div>
           </fieldset>
           <div class="hotels-filter-buttons">
             <button class="button-submit button-light button" type="submit">Применить</button>
@@ -133,12 +161,14 @@
       <section class="catalog-hotels">
         <header class="catalog-search-container">
           <p class="search-result">Найдено гостиниц: <span class="search-result-counter">38</span></p>
-          <form class="sorting-type" action="https://echo.htmlacademy.ru" method="get">
-            <select class="select-control" aria-label="Сортировка" id="sorting" name="sorting">
-              <option value="popular">Сначала популярные</option>
-              <option value="cheap" selected>Сначала дешевые</option>
-              <option value="expensive">Сначала дорогие</option>
-            </select>
+          <form class="sorting-type-form" action="https://echo.htmlacademy.ru" method="get">
+            <div class= "select sorting-type">
+              <select class="select-control" aria-label="Сортировка" id="sorting" name="sorting">
+                <option value="popular">Сначала популярные</option>
+                <option value="cheap" selected>Сначала дешевые</option>
+                <option value="expensive">Сначала дорогие</option>
+              </select>
+            </div>
             <button class="visually-hidden" type="submit">Отсортировать продукты</button>
           </form>
           <div class="button-search-container">
@@ -172,16 +202,16 @@
             <div class="hotels-card-buttons hotels-card-buttons-rating">
               <div class="rating-area">
                 <span class="visually-hidden">У отеля четыре звезды</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="17" fill="none" viewBox="0 0 24 17">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" fill="none" viewBox="0 0 20 17">
                   <path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/>
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="17" fill="none" viewBox="0 0 24 17">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" fill="none" viewBox="0 0 20 17">
                   <path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/>
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="17" fill="none" viewBox="0 0 24 17">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" fill="none" viewBox="0 0 20 17">
                   <path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/>
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="17" fill="none" viewBox="0 0 24 17">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" fill="none" viewBox="0 0 20 17">
                   <path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/>
                 </svg>
               </div>
@@ -206,16 +236,16 @@
             <div class="hotels-card-buttons hotels-card-buttons-rating">
               <div class="rating-area">
                 <span class="visually-hidden">У отеля четыре звезды</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="17" fill="none" viewBox="0 0 24 17">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" fill="none" viewBox="0 0 20 17">
                   <path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/>
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="17" fill="none" viewBox="0 0 24 17">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" fill="none" viewBox="0 0 20 17">
                   <path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/>
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="17" fill="none" viewBox="0 0 24 17">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" fill="none" viewBox="0 0 20 17">
                   <path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/>
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="17" fill="none" viewBox="0 0 24 17">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" fill="none" viewBox="0 0 20 17">
                   <path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/>
                 </svg>
               </div>
@@ -240,13 +270,13 @@
             <div class="hotels-card-buttons hotels-card-buttons-rating">
               <div class="rating-area">
                 <span class="visually-hidden">У отеля три звезды</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="17" fill="none" viewBox="0 0 24 17">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" fill="none" viewBox="0 0 20 17">
                   <path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/>
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="17" fill="none" viewBox="0 0 24 17">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" fill="none" viewBox="0 0 20 17">
                   <path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/>
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="17" fill="none" viewBox="0 0 24 17">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" fill="none" viewBox="0 0 20 17">
                   <path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/>
                 </svg>
               </div>
@@ -271,10 +301,10 @@
             <div class="hotels-card-buttons hotels-card-buttons-rating">
               <div class="rating-area">
                 <span class="visually-hidden">У отеля две звезды</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="17" fill="none" viewBox="0 0 24 17">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" fill="none" viewBox="0 0 20 17">
                   <path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/>
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="17" fill="none" viewBox="0 0 24 17">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" fill="none" viewBox="0 0 20 17">
                   <path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/>
                 </svg>
               </div>
@@ -308,10 +338,10 @@
     <footer class="page-footer">
       <section class="footer-subscription">
         <h2 class="footer-subscription-title">Подпишитесь на рассылку</h2>
-        <p class="footer-subscription-description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
+        <p class="footer-subscription-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="footer-subscription-form" action="https://echo.htmlacademy.ru" method="post">
           <label class="visually-hidden" for="subscription-email">Email</label>
-          <input class="footer-subscription-field" type="email" id="subscription-email" name="subscription-email" placeholder="Ваш e-mail" required>
+          <input class="footer-subscription-field field" type="email" id="subscription-email" name="subscription-email" placeholder="Ваш e-mail" required>
           <button class="subscription-button button-light button" type="submit">Подписаться</button>
         </form>
       </section>
