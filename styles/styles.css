@@ -21,8 +21,8 @@ html {
 body {
   height: 100%;
   font-family: "PT Sans", sans-serif;
-  font-weight: 400;
   font-size: 18px;
+  font-weight: 400;
   line-height: 24px;
   background-color: #F2F2F2;
   margin: 0;
@@ -31,8 +31,8 @@ body {
 .page-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   width: 1200px;
+  min-height: 100vh;
   color: #000000;
   background-color: #FFFFFF;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -43,9 +43,9 @@ body {
   position: absolute;
   width: 1px;
   height: 1px;
+  border: 0;
   margin: -1px;
   padding: 0;
-  border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -61,8 +61,8 @@ body {
 .button {
   display: inline-block;
   font-family: inherit;
-  font-weight: 700;
   font-size: 16px;
+  font-weight: 700;
   line-height: 20px;
   text-align: center;
   text-decoration: none;
@@ -89,7 +89,8 @@ body {
 }
 
 .button:disabled {
-  background-color: #E5E5E5;
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .navigation-link.button {
@@ -160,7 +161,7 @@ body {
 
 .button-reset:hover {
   background-color: transparent;
-  opacity: 60%;
+  opacity: 0.6;
 }
 
 .button-reset:focus {
@@ -176,22 +177,22 @@ body {
 
 .button-reset:disabled {
   background-color: transparent;
-  opacity: 10%;
+  opacity: 0.1;
 }
 
 .button-current {
   background-color: #7DB54F;
 }
 
-.button-current:hover {
+.button-current:not(:disabled):hover {
   background-color: #6C9E42;
 }
 
-.button-current:focus {
+.button-current:not(:disabled):focus {
   background-color: #6C9E42;
 }
 
-.button-current:active {
+.button-current:not(:disabled):active {
   background-color: #7DB54F;
   color: #FFFFFF4D;
 }
@@ -561,9 +562,14 @@ body {
   outline-offset: -3px;
 }
 
+.field:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 .field::placeholder {
   color: #000000;
-  opacity: 60%;
+  opacity: 0.6;
 }
 
 .footer-subscription-field {
@@ -724,15 +730,21 @@ body {
 
 .breadcrumbs-link:focus {
   color: #FFFFFF;
+  opacity: 0.6;
 }
 
 .breadcrumbs-link:active {
   color: #FFFFFF4D;
 }
 
-.breadcrumbs-link:first-child {
+.breadcrumbs-item:first-child .breadcrumbs-link {
   position: relative;
   width: 13px;
+}
+
+.breadcrumbs-item:last-child .breadcrumbs-link {
+  color: #FFFFFF;
+  pointer-events: none;
 }
 
 .breadcrumbs-link-icon {
@@ -785,6 +797,7 @@ body {
   display: block;
   line-height: 23px;
   padding-left: 36px;
+  cursor: pointer;
 }
 
 .control-mark {
@@ -802,11 +815,22 @@ body {
 }
 
 .control:focus .control-mark {
-  border: 3px solid #83B3D3;
+  outline: 3px solid #83B3D3;
+  outline-offset: -3px;
+}
+
+.control:focus-within .control-mark {
+  outline: 3px solid #83B3D3;
+  outline-offset: -3px;
 }
 
 .control:active .control-mark {
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+.control:has(.control-input:disabled) {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .control-input[type="checkbox"]:checked + .control-mark {
@@ -847,6 +871,7 @@ body {
   height: 48px;
   background-color: #FFFFFF;
   padding: 12px 20px;
+  cursor: text;
 }
 
 .range-inputs-field:first-child {
@@ -864,7 +889,7 @@ body {
 }
 
 .range-input {
-  width: 45px;
+  width: 75px;
   font: inherit;
   font-weight: 700;
   font-size: 18px;
@@ -888,6 +913,7 @@ body {
   line-height: 24px;
   color: #AAAAAA;
   margin-left: auto;
+  cursor: text;
 }
 
 .range-scale {
@@ -927,6 +953,11 @@ body {
 .range-toggle:active {
   border: 2px solid #83B3D3;
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+}
+
+.range-toggle:disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .toggle-min {
@@ -995,6 +1026,7 @@ body {
   padding: 14px 20px;
   padding-right: 48px;
   appearance: none;
+  cursor: pointer;
 }
 
 .select-control:hover {
@@ -1006,7 +1038,8 @@ body {
 }
 
 .select-control:disabled {
-  opacity: 30%;
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .button-search-container {
@@ -1025,6 +1058,7 @@ body {
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   margin-right: 8px;
+  cursor: pointer;
 }
 
 .button-search:hover {
@@ -1037,6 +1071,11 @@ body {
 
 .button-search:active {
   border-color: #000000;
+}
+
+.button-search:disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .button-search-current {
@@ -1171,6 +1210,7 @@ body {
 
 .rating-area {
   align-self: center;
+  cursor: default;
 }
 
 .pagination {
@@ -1216,12 +1256,13 @@ body {
 }
 
 .pagination-link:not(.show-more, .pagination-current):active {
-  background-color: #82B3D3;
   color: #FFFFFF4D;
+  background-color: #82B3D3;
 }
 
 .pagination-current {
   background-color: #F2F2F2;
+  cursor: default
 }
 
 .item-current a {
@@ -1229,18 +1270,22 @@ body {
 }
 
 .show-more {
-  background-color: #FFFFFF;
   color: #000000;
+  background-color: #FFFFFF;
+  cursor: default
 }
 
 .modal-container {
   position: fixed;
-  display: flex;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: minmax(30px, 1fr) 1fr 1fr;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   background-color: rgba(242, 242, 242, 0.8);
+  transition: opacity 0.3s ease;
 }
 
 .modal-container-close {
@@ -1248,6 +1293,7 @@ body {
 }
 
 .modal {
+  grid-row: 2 / 3;
   position: relative;
   background-color: #FFFFFF;
   border-radius: 30px;
@@ -1284,9 +1330,14 @@ body {
 
 .modal-close-button:active {
   background-color: #E5E5E5;
-  opacity: 30%;
+  opacity: 0.3;
   border: none;
   outline: none;
+}
+
+.modal-close-button:disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .modal-title {
@@ -1298,6 +1349,7 @@ body {
   color: #000000;
   margin: 0;
   margin-bottom: 64px;
+  padding-right: 64px;
 }
 
 .hotel-search-form {
@@ -1311,7 +1363,7 @@ body {
   align-items: center;
   grid-template-columns: 137px 1fr;
   grid-column: 1 / -1;
-  margin-bottom: 48px;
+  margin-bottom: 23px;
 }
 
 .field-group-number {
@@ -1335,7 +1387,7 @@ body {
 
 .search-date-value {
   position: absolute;
-  width: 140px;
+  width: 200px;
   font: inherit;
   font-weight: 700;
   font-size: 18px;
@@ -1345,7 +1397,7 @@ body {
   border: none;
   outline: none;
   appearance: textfield;
-  margin-left: 20px;
+  padding-left: 20px;
 }
 
 .search-date-value::-webkit-outer-spin-button,
@@ -1396,9 +1448,9 @@ input[type='date']::-webkit-calendar-picker-indicator {
 }
 
 .text-field-message {
-  position: absolute;
-  bottom: -25px;
-  left: 157px;
+  grid-column: 1 / -1;
+  margin-top: 4px;
+  margin-left: 157px;
 }
 
 .text-field-message.invalid-message {
@@ -1474,12 +1526,13 @@ input[type='date']::-webkit-calendar-picker-indicator {
   background-color: #333333;
   margin-bottom: -8px;
   bottom: 100%;
-  left: 50%;
+  left: 49%;
   transform: rotate(-45deg) translateX(-50%);
 }
 
 .tooltip-toggle:hover + .tooltip-text,
-.tooltip-toggle:focus + .tooltip-text {
+.tooltip-toggle:focus + .tooltip-text,
+.tooltip-toggle:focus-within + .tooltip-text {
   display: block;
 }
 
@@ -1513,6 +1566,11 @@ input[type='date']::-webkit-calendar-picker-indicator {
   outline: none;
 }
 
+.search-number-button:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 .number-button-icon {
   position: absolute;
   top: 0;
@@ -1522,15 +1580,15 @@ input[type='date']::-webkit-calendar-picker-indicator {
   margin: auto;
 }
 
-.search-number-button:hover .number-button-icon {
+.search-number-button:not(:disabled):hover .number-button-icon {
   fill-opacity: 1;
 }
 
-.search-number-button:focus .number-button-icon {
+.search-number-button:not(:disabled):focus .number-button-icon {
   fill-opacity: 1;
 }
 
-.search-number-button:active .number-button-icon {
+.search-number-button:not(:disabled):active .number-button-icon {
   fill-opacity: .3;
 }
 
