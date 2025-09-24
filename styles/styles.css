@@ -926,13 +926,15 @@ img {
   background-color: transparent;
   border: none;
   outline: none;
-  appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
 }
 
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
   margin: 0;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
 }
 
 .hotels-filter-label {
@@ -1061,7 +1063,8 @@ img {
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   outline: none;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   cursor: pointer;
 }
 
@@ -1195,6 +1198,9 @@ img {
 }
 
 .hotels-card-link-image {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: image;
   align-self: center;
   justify-self: center;
@@ -1203,13 +1209,41 @@ img {
   height: 212px;
 }
 
+.hotels-card.cards > .hotels-card-link-image {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+}
+
+.hotels-card.list > .hotels-card-link-image {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+}
+
 .hotels-card-image {
   object-fit: cover;
   object-position: center;
 }
 
 .hotels-card-link-title {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: title;
+}
+
+.hotels-card.cards > .hotels-card-link-title {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+}
+
+.hotels-card.list > .hotels-card-link-title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
 }
 
 .hotels-card-title {
@@ -1221,9 +1255,24 @@ img {
 }
 
 .hotels-card-type {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: type;
   display: flex;
   margin: 8px 0;
+}
+
+.hotels-card.cards > .hotels-card-type {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+}
+
+.hotels-card.list > .hotels-card-type {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
 }
 
 .hotels-card-price {
@@ -1232,6 +1281,9 @@ img {
 }
 
 .hotels-card-buttons {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: buttons;
   display: flex;
   flex-wrap: wrap;
@@ -1240,9 +1292,36 @@ img {
   margin: 8px 0;
 }
 
+.hotels-card.cards > .hotels-card-buttons {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+}
+
+.hotels-card.list > .hotels-card-buttons {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+}
+
 .hotels-card-buttons-rating {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: rating;
   margin-bottom: 0;
+}
+
+.hotels-card.cards > .hotels-card-buttons-rating {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+}
+
+.hotels-card.list > .hotels-card-buttons-rating {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
 }
 
 .rating-area {
@@ -1448,12 +1527,14 @@ img {
   background-color: transparent;
   border: none;
   outline: none;
-  appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
 }
 
 .search-date-value::-webkit-outer-spin-button,
 .search-date-value::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   margin: 0;
 }
 
@@ -1462,7 +1543,8 @@ img {
   width: 100%;
   background: #f2f2f2 url("../images/svg/date-icon.svg") no-repeat;
   background-position: right 14px center;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
 }
 
 .modal-content input[type=date]::-webkit-datetime-edit-text {
@@ -1645,13 +1727,15 @@ img {
   background-color: transparent;
   border: none;
   outline: none;
-  appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
 }
 
 .search-number-field::-webkit-outer-spin-button,
 .search-number-field::-webkit-inner-spin-button {
   margin: 0;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
 }
 
 .hotel-search-button {
