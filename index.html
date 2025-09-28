@@ -12,7 +12,9 @@
   <div class="page-container">
     <header class="page-header">
       <nav class="navigation">
-        <img class="logo" src="images/svg/logo.svg" width="140" height="70" alt="Логотип Седоны">
+        <a class="navigation-logo-link" href="index.html">
+          <img class="logo" src="images/svg/logo.svg" width="140" height="70" alt="Логотип Седоны">
+        </a>
         <ul class="navigation-list">
           <li class="navigation-list-item">
             <a class="navigation-link navigation-link-current" aria-current="page">Главная</a>
@@ -170,7 +172,7 @@
       </section>
     </footer>
 
-    <div class="modal-container modal-container-close ">
+    <div class="modal-container modal-container-close">
       <div class="modal modal-hotel-search">
         <section class="modal-content">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
@@ -178,15 +180,15 @@
             <div class="field-group">
               <label class="hotel-search-label" for="hotel-date-in">Дата Заезда:</label>
               <div class="search-date-container">
-                <input class="hotel-search-field field" type="date" id="hotel-date-in" name="hotel-date-in" required>
-                <input class="search-date-value" type="text" value="27 апреля 2020" placeholder="Укажите дату">
+                <input class="hotel-search-field field" tabindex="-1" type="date" id="hotel-date-in" name="hotel-date-in">
+                <input class="search-date-value" type="text" value="27 апреля 2020" placeholder="Укажите дату" required>
               </div>
               <span class="text-field-message invalid-message">Мы не можем отправить вас в прошлое.</span>
             </div>
             <div class="field-group">
               <label class="hotel-search-label" for="hotel-date-out">Дата Выезда:</label>
               <div class="search-date-container">
-                <input class="hotel-search-field field" type="date" id="hotel-date-out" name="hotel-date-out" required>
+                <input class="hotel-search-field field" tabindex="-1" type="date" id="hotel-date-out" name="hotel-date-out" required>
                 <input class="search-date-value" type="text" value="1 сентября 2021" placeholder="Укажите дату">
               </div>
               <div class="text-field-message">На эти даты есть свободные номера. Пока есть.</div>
@@ -199,12 +201,14 @@
                     <svg class="number-button-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="2" fill="currentColor" fill-opacity=".3" viewBox="0 0 14 2">
                       <path d="M0 0v2h14V0H0Z"/>
                     </svg>
+                    <span class="visually-hidden">Уменьшить количество взрослых</span>
                   </button>
                   <input class="search-number-field" type="number" id="adults-visitor-number" name="adults-visitor-number" value="2" placeholder="2" required>
                   <button class="search-number-button number-button-plus"  type="button">
                     <svg class="number-button-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" fill-opacity=".3" viewBox="0 0 14 14">
                       <path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z"/>
                     </svg>
+                    <span class="visually-hidden">Увеличить количество взрослых</span>
                   </button>
                 </div>
               </div>
@@ -216,6 +220,7 @@
                       <svg class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 26 26">
                         <circle cx="13" cy="13" r="13" fill="#83B3D3"/><path fill="#fff" fill-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" clip-rule="evenodd"/>
                       </svg>
+                      <span class="visually-hidden">Примечание </span>
                     </button>
                     <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до&nbsp;6 лет размещаются бесплатно.</span>
                   </span>
@@ -225,12 +230,14 @@
                     <svg class="number-button-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="2" fill="currentColor" fill-opacity=".3" viewBox="0 0 14 2">
                       <path d="M0 0v2h14V0H0Z"/>
                     </svg>
+                    <span class="visually-hidden">Уменьшить количество детей</span>
                   </button>
                   <input class="search-number-field" type="number" id="children-visitor-number" name="children-visitor-number" value="2" placeholder="2">
                   <button class="search-number-button number-button-plus" type="button">
                     <svg class="number-button-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" fill-opacity=".3" viewBox="0 0 14 14">
                       <path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z"/>
                     </svg>
+                    <span class="visually-hidden">Увеличить количество детей</span>
                   </button>
                 </div>
               </div>
@@ -239,10 +246,16 @@
           </form>
         </section>
         <button class="modal-close-button" type="button">
+          <svg class="close-button-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" fill-opacity="1" viewBox="0 0 14 14">
+            <path
+             d="M14 1.3 12.7 0 7 5.7 1.3 0 0 1.3 5.7 7 0 12.7 1.3 14 7 8.3l5.7 5.7 1.3-1.3L8.3 7 14 1.3Z"/>
+          </svg>
           <span class="visually-hidden">Закрыть</span>
         </button>
       </div>
     </div>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

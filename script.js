@@ -1,3 +1,62 @@
+// Открытие/закрытие модального окна
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.querySelector(".modal-container");
+  const openButton = document.querySelector(".appointment-button");
+  const closeButton = document.querySelector(".modal-close-button");
+
+  if (openButton && modal && closeButton) {
+    openButton.addEventListener("click", function () {
+      modal.classList.remove("modal-container-close");
+    });
+
+    closeButton.addEventListener("click", function () {
+      modal.classList.add("modal-container-close");
+    });
+
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) {
+        modal.classList.add("modal-container-close");
+      }
+    });
+  }
+});
+
+// Скрипт на календарь
+const months = [
+  "января", "февраля", "марта", "апреля", "мая", "июня",
+  "июля", "августа", "сентября", "октября", "ноября", "декабря"
+];
+
+document.querySelectorAll(".search-date-container").forEach(container => {
+  const dateInput = container.querySelector(".hotel-search-field");
+  const textInput = container.querySelector(".search-date-value");
+
+  dateInput.addEventListener("change", function () {
+    if (this.value) {
+      const date = new Date(this.value);
+      const day = date.getDate();
+      const month = months[date.getMonth()];
+      const year = date.getFullYear();
+      textInput.value = `${day} ${month} ${year}`;
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".search-date-container").forEach(container => {
+    const textInput = container.querySelector(".search-date-value");
+
+    textInput.addEventListener("focus", () => {
+      container.classList.add("focused");
+    });
+
+    textInput.addEventListener("blur", () => {
+      container.classList.remove("focused");
+    });
+  });
+});
+
+//Скрипт на сетку товаров на странице гостиниц
 const list = document.querySelector('.hotels-list');
 const cards = document.querySelectorAll('.hotels-card');
 const buttonGrid = document.querySelector('.button-search-grid');

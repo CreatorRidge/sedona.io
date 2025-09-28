@@ -127,35 +127,37 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="hotels-filter-group">
+          <fieldset class="hotels-range-group">
             <legend class="hotels-filter-title">Стоимость, ₽:</legend>
-            <div class="range-wrapper-inputs">
-              <div class="range-inputs-field">
-                <input class="range-input" type="number" value="0" name="min-price" id="range-input-from" placeholder="0">
-                <label class="hotels-filter-label" for="range-input-from">от</label>
+            <div class="range-group">
+              <div class="range-wrapper-inputs">
+                <div class="range-inputs-field">
+                  <input class="range-input" type="number" value="0" name="min-price" id="range-input-from" placeholder="0">
+                  <label class="hotels-filter-label" for="range-input-from">от</label>
+                </div>
+                <div class="range-inputs-field">
+                  <input class="range-input" type="number" value="9000" name="max-price" id="range-input-to" placeholder="9000">
+                  <label class="hotels-filter-label" for="range-input-to">до</label>
+                </div>
               </div>
-              <div class="range-inputs-field">
-                <input class="range-input" type="number" value="9000" name="max-price" id="range-input-to" placeholder="9000">
-                <label class="hotels-filter-label" for="range-input-to">до</label>
-              </div>
-            </div>
-            <div class="range">
-              <div class="range-scale">
-                <div class="range-bar" style="left: 0; width: 206px">
-                  <button class="range-toggle toggle-min" type="button">
-                    <span class="visually-hidden">Изменить минимальную цену.</span>
-                  </button>
-                  <button class="range-toggle toggle-max" type="button">
-                    <span class="visually-hidden">Изменить максимальную цену.</span>
-                  </button>
+              <div class="range">
+                <div class="range-scale">
+                  <div class="range-bar" style="left: 0; width: 206px">
+                    <button class="range-toggle toggle-min" type="button">
+                      <span class="visually-hidden">Изменить минимальную цену.</span>
+                    </button>
+                    <button class="range-toggle toggle-max" type="button">
+                      <span class="visually-hidden">Изменить максимальную цену.</span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
+            <div class="hotels-filter-buttons">
+              <button class="button-submit button-light button" type="submit">Применить</button>
+              <button class="button-reset button" type="reset">Сбросить</button>
+            </div>
           </fieldset>
-          <div class="hotels-filter-buttons">
-            <button class="button-submit button-light button" type="submit">Применить</button>
-            <button class="button-reset button" type="reset">Сбросить</button>
-          </div>
         </form>
       </section>
       <section class="catalog-hotels">
