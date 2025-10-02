@@ -11,10 +11,10 @@
 <body>
   <div class="page-container">
     <header class="page-header">
+      <a class="navigation-logo-link" href="index.html">
+        <img class="logo" src="images/svg/logo.svg" width="140" height="70" alt="Логотип Седоны">
+      </a>
       <nav class="navigation">
-        <a class="navigation-logo-link" href="index.html">
-          <img class="logo" src="images/svg/logo.svg" width="140" height="70" alt="Логотип Седоны">
-        </a>
         <ul class="navigation-list">
           <li class="navigation-list-item">
             <a class="navigation-link" href="index.html">Главная</a>
@@ -28,7 +28,12 @@
         </ul>
         <ul class="navigation-list navigation-user">
           <li class="navigation-list-item">
-            <a class="navigation-link button" href="#">Хочу сюда!</a>
+            <a class="navigation-link" href="#">
+              <svg class="navigation-link-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" viewBox="0 0 19 19">
+                <path d="m18.5 17-3.7-3.67c1-1.3 1.7-2.98 1.7-4.87A8 8 0 0 0 8.5.5C4.1.5.5 4.18.5 8.56a8 8 0 0 0 12.9 6.26l3.7 3.68 1.4-1.5Zm-10-2.48a6 6 0 0 1-6-5.96 6 6 0 0 1 12 0 6 6 0 0 1-6 5.96Z"/>
+              </svg>
+              <span class="visually-hidden">Поиск</span>
+            </a>
           </li>
           <li class="navigation-list-item">
             <a class="navigation-link" href="#">
@@ -40,12 +45,7 @@
             </a>
           </li>
           <li class="navigation-list-item">
-            <a class="navigation-link" href="#">
-              <svg class="navigation-link-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" viewBox="0 0 19 19">
-                <path d="m18.5 17-3.7-3.67c1-1.3 1.7-2.98 1.7-4.87A8 8 0 0 0 8.5.5C4.1.5.5 4.18.5 8.56a8 8 0 0 0 12.9 6.26l3.7 3.68 1.4-1.5Zm-10-2.48a6 6 0 0 1-6-5.96 6 6 0 0 1 12 0 6 6 0 0 1-6 5.96Z"/>
-              </svg>
-              <span class="visually-hidden">Поиск</span>
-            </a>
+            <a class="navigation-link button" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
@@ -66,7 +66,7 @@
                     <clipPath id="a"><path d="M0 .5h13v14H0z"/></clipPath>
                   </defs>
                 </svg>
-                <span class="visually-hidden">Главная</span>
+                <span class="visually-hidden breadcrumbs-link-description">Главная</span>
               </a>
             </li>
             <li class="breadcrumbs-item">
@@ -163,26 +163,23 @@
       <section class="catalog-hotels">
         <header class="catalog-search-container">
           <p class="search-result">Найдено гостиниц: <span class="search-result-counter">38</span></p>
-          <form class="sorting-type-form" action="https://echo.htmlacademy.ru" method="get">
-            <div class= "select sorting-type">
-              <select class="select-control" aria-label="Сортировка" id="sorting" name="sorting">
-                <option value="popular">Сначала популярные</option>
-                <option value="cheap" selected>Сначала дешевые</option>
-                <option value="expensive">Сначала дорогие</option>
-              </select>
-            </div>
-            <button class="visually-hidden" type="submit">Отсортировать продукты</button>
-          </form>
+          <div class= "select sorting-type">
+            <select class="select-control" aria-label="Сортировка" id="sorting" name="sorting">
+              <option value="popular">Сначала популярные</option>
+              <option value="cheap" selected>Сначала дешевые</option>
+              <option value="expensive">Сначала дорогие</option>
+            </select>
+          </div>
           <div class="button-search-container">
-            <button class="button-search button-search-grid button-search-current" type="button">
+            <a class="button-search button-search-grid button-search-current" href="https://catalog.html?view=tile">
               <span class="visually-hidden">Показать плитку</span>
-            </button>
-            <button class="button-search button-search-cards" type="button">
+            </a>
+            <a class="button-search button-search-cards" href="https://catalog.html?view=card">
               <span class="visually-hidden">Показать карточки</span>
-            </button>
-            <button class="button-search button-search-list" type="button">
+            </a>
+            <a class="button-search button-search-list" href="https://catalog.html?view=list" onclick="return clickfunc()">
               <span class="visually-hidden">Показать список</span>
-            </button>
+            </a>
           </div>
         </header>
         <ul class="hotels-list grid">

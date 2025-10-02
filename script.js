@@ -70,21 +70,24 @@ function changeStyle(newStyle) {
   cards.forEach(card => card.classList.add(newStyle));
 }
 
-buttonGrid.addEventListener('click', () => {
+buttonGrid.addEventListener('click', (event) => {
+  event.preventDefault();
   changeStyle('grid');
   buttonGrid.classList.add('button-search-current');
   buttonCards.classList.remove('button-search-current');
   buttonList.classList.remove('button-search-current');
 });
 
-buttonCards.addEventListener('click', () => {
+buttonCards.addEventListener('click', (event) => {
+  event.preventDefault();
   changeStyle('cards');
   buttonCards.classList.add('button-search-current');
   buttonGrid.classList.remove('button-search-current');
   buttonList.classList.remove('button-search-current');
 });
 
-buttonList.addEventListener('click', () => {
+buttonList.addEventListener('click', (event) => {
+  event.preventDefault();
   changeStyle('list');
   buttonList.classList.add('button-search-current');
   buttonGrid.classList.remove('button-search-current');
